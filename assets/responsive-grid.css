@@ -1,0 +1,237 @@
+/* Grid
+--------------------------------------------- */
+
+.grid {
+	display: table;
+	overflow: hidden;
+	width: 100%;
+}
+
+.grid-box {
+	background-color: #fff;
+	border: 1px solid #eee;
+	border-width: 0 1px 1px 0;
+	color: #222;
+	display: table-cell;
+	height: 100%;
+	margin: 0;
+	padding: 3%;
+	vertical-align: top;
+	width: 33.333333333333%;
+}
+
+.grid-box h6 {
+	margin-bottom: 10px;
+}
+
+.grid-box-content {
+	width: 100%;
+}
+
+.black .grid .grid-box {
+	border-color: #222;
+}
+
+.grid-box a {
+	color: #222;
+	text-decoration: none;
+}
+
+.grid-box a.button {
+	color: #fff;
+}
+
+.grid-box a.grid-box-content:hover,
+.grid-box a.features-link:hover {
+	background-color: #222;
+	color: #fff;
+}
+
+.black .grid-box a.features-link:hover,
+.grid-box.title {
+	background-color: #0066cc;
+}
+
+.grid-box.title,
+.grid-box.title a {
+	color: #fff;
+}
+
+/* Grid - Flexbox Supported
+--------------------------------------------- */
+
+.flexbox .grid {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-align: stretch;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	overflow: visible;
+}
+
+.flexbox .grid .grid-box {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: stretch;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+	height: auto;
+	padding: 45px; /* Add pixel value for FF bug on rendering percentage as 0 */
+}
+
+.flexbox .grid-box-content {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack:justify;
+	-webkit-justify-content:space-between;
+	-ms-flex-pack:justify;
+	justify-content:space-between;
+}
+
+.flexbox .grid-box-item.bottom p:last-of-type {
+	margin-bottom: 0;
+}
+
+/* Column Classes
+--------------------------------------------- */
+/* Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css */
+
+.five-sixths,
+.four-sixths,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-sixths,
+.two-fourths,
+.two-sixths,
+.two-thirds {
+	float: left;
+	margin-left: 2.564102564102564%;
+}
+
+.one-half,
+.three-sixths,
+.two-fourths {
+	width: 48.717948717948715%;
+}
+
+.grid-one-half .grid-box,
+.grid-three-sixths .grid-box,
+.grid-two-fourths .grid-box {
+	width: 50%;
+}
+
+.one-third,
+.two-sixths {
+	width: 31.623931623931625%;
+}
+
+.grid-one-third .grid-box,
+.grid-two-sixths .grid-box {
+	width: 33.333333333333333%;
+}
+
+.four-sixths,
+.two-thirds {
+	width: 65.81196581196582%;
+}
+
+.grid-four-sixths .grid-box,
+.grid-two-thirds .grid-box {
+	width: 66.66666666666667%;
+}
+
+.one-fourth {
+	width: 23.076923076923077%;
+}
+
+.grid-one-fourth .grid-box {
+	width: 25%;
+}
+
+.three-fourths {
+	width: 74.35897435897436%;
+}
+
+.grid-three-fourths .grid-box {
+	width: 75%;
+}
+
+.one-sixth {
+	width: 14.52991452991453%;
+}
+
+.grid-one-sixth .grid-box {
+	width: 16.66666666666667%;
+}
+
+.five-sixths {
+	width: 82.90598290598291%;
+}
+
+.grid-five-sixths .grid-box {
+	width: 83.33333333333335%;
+}
+
+.first {
+	clear: both;
+	margin-left: 0;
+}
+
+/* Grid
+--------------------------------------------- */
+
+@media only screen and (max-width: 1200px) {
+
+	.flexbox .grid .grid-box {
+		padding: 30px;
+	}
+
+}
+
+@media only screen and (max-width: 759px) {
+
+	.grid-box,
+	.grid-five-sixths .grid-box,
+	.grid-four-sixths .grid-box,
+	.grid-one-fourth .grid-box,
+	.grid-one-half .grid-box,
+	.grid-one-sixth .grid-box,
+	.grid-one-third .grid-box,
+	.grid-three-fourths .grid-box,
+	.grid-three-sixths .grid-box,
+	.grid-two-fourths .grid-box,
+	.grid-two-sixths .grid-box,
+	.grid-two-thirds .grid-box {
+		display: block;
+		width: 100%;
+	}
+
+	.flexbox .grid .grid-box {
+		padding: 25px;
+	}
+
+}
